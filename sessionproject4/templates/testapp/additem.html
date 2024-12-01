@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container" align="center">
+        <h1>Add Items on your list.</h1>
+        <form method="post">
+            {{form.as_p}}
+            {%csrf_token%}
+            <input class="btn btn-success" type="submit" name="" value="Add Item">
+            <a href="/display" class="btn btn-primary" role="button">Display Item</a>
+        </form>
+        {% if success %}
+        <p class="text-success">Item added successfully!</p>
+        {% endif %}
+
+    </div>
+</body>
+
+</html>

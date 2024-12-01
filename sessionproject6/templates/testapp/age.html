@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age</title>
+</head>
+
+<body>
+    <h1>Hello {{ name }}, Provide Your Age</h1>
+    <form method="POST" action="{% url 'age_view' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Submit Age">
+    </form>
+
+</body>
+
+</html>
